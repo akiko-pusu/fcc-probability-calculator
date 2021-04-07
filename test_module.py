@@ -1,10 +1,11 @@
 import unittest
 import prob_calculator
+from prob_calculator import Hat
 
 prob_calculator.random.seed(95)
 class UnitTests(unittest.TestCase):
     def test_hat_class_contents(self):
-        hat = prob_calculator.Hat(red=3,blue=2)
+        hat = Hat(red=3,blue=2)
         actual = hat.contents
         expected = ["red","red","red","blue","blue"]
         self.assertEqual(actual, expected, 'Expected creation of hat object to add correct contents.')
